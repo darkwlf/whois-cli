@@ -1,5 +1,5 @@
 # whois-cli
-a cli whois script writen with pyhton
+a cli whois script writen with pyhton3.8
 
 how to use:
    
