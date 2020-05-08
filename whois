@@ -4,7 +4,7 @@ import time
 import requests
 import sys
 from termcolor import colored
-a = sys.argv[1]
+a = input("target:")
 print(colored("querying target=>"+a,"blue"))
 time.sleep(1)
 req = requests.get("https://www.whois.com/whois/"+a)
