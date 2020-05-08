@@ -1,0 +1,13 @@
+#!/usr/bin/python3.8
+import bs4
+import requests
+import sys
+from termcolor import colored
+a = sys.argv[1]
+print(colored("querying target=>"+a,"blue"))
+time.sleep(1)
+req = requests.get("https://www.whois.com/whois/"+a)
+t = bs4.BeautifulSoup(req.text,"html.parser")
+c = t.find_all('pre')
+for i in c:
+    print(colored(i.text+"\n","green"))
